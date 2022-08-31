@@ -37,6 +37,12 @@ public class Problem11 {
         //순위
         int max_rank = 7-max;
         int min_rank = 7-min;
+		
+	//순위 예외처리 (7등은 존재하지 않으므로 6등으로 바꿔주어야함!)
+        if(max_rank==7 || min_rank==7) {
+       		max_rank = 6;
+        	min_rank = 6;
+        }	
        
         //answer배열에 등수 놓기
         int[] answer = {max_rank, min_rank};
