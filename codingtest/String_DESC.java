@@ -6,15 +6,15 @@ import java.util.Scanner;
 public class Problem10 {
 	public static void main(String[] args) {
 		
-		//#문제(Lv01) 문자열 내림차순으로 배치하기
+	//#문제(Lv01) 문자열 내림차순으로 배치하기
 		
-		String answer = ""; //주어진 코드
+	String answer = ""; //주어진 코드
 		
-		//스캐너
-		Scanner sc = new Scanner(System.in); //객체생성
-		String s = sc.nextLine();//입력받은 값
+	//스캐너
+	Scanner sc = new Scanner(System.in); //객체생성
+	String s = sc.nextLine();//입력받은 값
 		
-		//배열
+	//배열
         String[] s_1 = s.split(""); //입력값을 문자열 타입으로 배열화
         Arrays.sort(s_1); //오름차순 정렬
         String[] s_2 = new String[s.length()]; //내림차순을 위해 쓰이는 배열
