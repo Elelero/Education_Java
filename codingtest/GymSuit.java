@@ -7,6 +7,7 @@ public class GymSuit {
 
 	public static void main(String[] args) {
 		
+	//#문제(Lv01) 체육복	
 	//입력값
 	int n = 5;
 	int[] lost = {2, 4};
