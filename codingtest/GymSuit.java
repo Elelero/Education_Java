@@ -7,10 +7,10 @@ public class GymSuit {
 
 	public static void main(String[] args) {
 		
-		//입력값
-		int n = 5;
-		int[] lost = {2, 4};
-		int[] reserve = {1, 3, 5};	
+	//입력값
+	int n = 5;
+	int[] lost = {2, 4};
+	int[] reserve = {1, 3, 5};	
 	        
         int count = 0; // 체육복을 빌린 학생들의 수
         int sum = 0; // 최종적으로 값을 내릴 수
