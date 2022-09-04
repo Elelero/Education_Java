@@ -43,9 +43,10 @@ public class GymSuit {
                 }
             }
         }
-        
+	
         sum = n -(lost.length-count);
-        
+		
+        //최종값
         int answer = sum;
         System.out.println(answer);
 	}
