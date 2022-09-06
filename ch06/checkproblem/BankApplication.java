@@ -8,6 +8,7 @@ public class BankApplication {
 	private static Scanner sc = new Scanner(System.in); //스캐너 객체 생성
 	private static Account[] accountArr = new Account[100]; //Account 배열 생성
 
+========//main 메소드 생성//========================================================================
 	public static void main(String[] args) {
 		
 		//변수 선언
@@ -35,7 +36,9 @@ public class BankApplication {
 		}
 		System.out.println("시스템이 종료되었습니다");
 	}
-				
+	
+	
+========//기능 메소드 생성//========================================================================		
 	//1.계좌생성 메소드
 	private static void createAccount() {
 		System.out.println("------");
