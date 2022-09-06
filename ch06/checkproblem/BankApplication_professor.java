@@ -6,6 +6,7 @@ public class BankApplication_professor {
    private static Account[] accountArray = new Account[100];
    private static Scanner scanner = new Scanner(System.in);
    
+//==<main 메소드>==============================================================================   
    public static void main(String[] args) {
       boolean run = true;      
       while(run) {
@@ -14,7 +15,7 @@ public class BankApplication_professor {
          System.out.println("----------------------------------------------------------");
          System.out.print("선택> ");
          
-         int selectNo = Integer.parseInt(scanner.nextLine());
+         int selectNo = Integer.parseInt(scanner.nextLine()); //nextLine으로 스캐너 입력받기!
          
          if(selectNo == 1) {
             createAccount();
@@ -31,6 +32,8 @@ public class BankApplication_professor {
       System.out.println("프로그램 종료");
    }
    
+   
+//==<메소드 생성>==============================================================================
    //계좌생성하기
    private static void createAccount() {
       System.out.println("--------------");
