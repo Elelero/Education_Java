@@ -1,0 +1,16 @@
+class Solution {
+    public int solution(int n) {
+        
+        int answer = 0;
+        
+        for(int x=1; x<n; x++){
+            if(n%x==1){
+                if(x>answer){
+                    answer = x;
+                    break; //break을 이용해야 가장 작은 자연수 x를 출력할 수 있음
+                }
+            }
+        }
+    return answer;
+    }
+}
