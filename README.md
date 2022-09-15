@@ -1,7 +1,7 @@
 # 이것이 자바다!
 
 
-![image](https://user-images.githubusercontent.com/91528640/185888192-598fe1b5-8267-4e1a-befd-80e5613790e5.png)
+![image](https://user-images.githubusercontent.com/91528640/190296111-fdfed4ee-4c9f-49a3-b7ef-542faa7c9d6d.png)
 
 
 ### 목차
