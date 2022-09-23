@@ -8,11 +8,11 @@ public class JoinExample {
 		sumThread.start();
 		
 		//예외 처리
-		try {
-			sumThread.join();
-		} catch (InterruptedException e) {
-		}
-		
+//		try {
+//			sumThread.join();
+//		} catch (InterruptedException e) {
+//		}
+//		
 		System.out.println("1~100 합: " + sumThread.getSum());
 	}
 
