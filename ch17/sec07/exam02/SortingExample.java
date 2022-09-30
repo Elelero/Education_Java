@@ -29,7 +29,7 @@ public class SortingExample {
 		
 		System.out.println("\n");
 		
-		//이름을 기준으로 오름차순
+		//이름을 기준으로 오름차순 정렬 새 스트림 (교수님이 따로 해보라고 말씀하신 실습)
 		studentList.stream()
 		.sorted((s1, s2) -> s1.getName().compareTo(s2.getName()))
 		.forEach(s -> System.out.println(s.getName()));
