@@ -7,7 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class ProductClient {
-	  //필드
+    //필드
     private Socket socket;
     private DataInputStream dis;
     private DataOutputStream dos;
@@ -23,7 +23,7 @@ public class ProductClient {
 
       scanner = new Scanner(System.in);
 
-	 	  //상품 목록 보여주기
+      //상품 목록 보여주기
       list();
     }
   
@@ -84,11 +84,11 @@ public class ProductClient {
                 );
          }
        }
-	 	   //메뉴 출력
+       //메뉴 출력
        menu();
     }
   
-	  //메소드: 상품 생성
+    //메소드: 상품 생성
     public void create() throws IOException {
        //상품 정보 입력
        System.out.println("[상품 생성]");
@@ -113,16 +113,16 @@ public class ProductClient {
        dos.writeUTF(request.toString());
        dos.flush();
 
-	 	   //응답 받기
+       //응답 받기
        JSONObject response = new JSONObject(dis.readUTF());
        if(response.getString("status").equals("success")) {
           list();
        }
     }
   
-	  //메소드: 상품 수정
+    //메소드: 상품 수정
     public void update() throws IOException {
-	 	   //상품 수정 내용 입력
+       //상품 수정 내용 입력
        System.out.println("[상품 수정]");
        Product product = new Product();
        System.out.print("상품 번호: ");
@@ -134,7 +134,7 @@ public class ProductClient {
        System.out.print("재고 변경: ");
        product.setStock(Integer.parseInt(scanner.nextLine()));
 
-	 	   //상품 수정 요청하기
+       //상품 수정 요청하기
        JSONObject data = new JSONObject();
        data.put("no", product.getNo());
        data.put("name", product.getName());
@@ -148,45 +148,45 @@ public class ProductClient {
        dos.writeUTF(request.toString());
        dos.flush();
 
-	 	   //응답 받기
+       //응답 받기
        JSONObject response = new JSONObject(dis.readUTF());
        if(response.getString("status").equals("success")) {
           list();
        }
     }
   
-	  //메소드: 상품 삭제
-	  public void delete() throws IOException {
-	 	   //상품 삭제 내용 입력
-       System.out.println("[상품 삭제]");
-       System.out.print("상품 번호: ");
-       int no = Integer.parseInt(scanner.nextLine());
+    //메소드: 상품 삭제
+    public void delete() throws IOException {
+    	//상품 삭제 내용 입력
+       	System.out.println("[상품 삭제]");
+       	System.out.print("상품 번호: ");
+       	int no = Integer.parseInt(scanner.nextLine());
 
-	 	   //상품 수정 요청하기
-       JSONObject data = new JSONObject();
-       data.put("no", no);
+	//상품 수정 요청하기
+       	JSONObject data = new JSONObject();
+       	data.put("no", no);
 
-       JSONObject request = new JSONObject();
-       request.put("menu", 3);
-       request.put("data", data);
+       	JSONObject request = new JSONObject();
+       	request.put("menu", 3);
+       	request.put("data", data);
 
-       dos.writeUTF(request.toString());
-       dos.flush();
+       	dos.writeUTF(request.toString());
+       	dos.flush();
 
-	 	   //응답 받기
-       JSONObject response = new JSONObject(dis.readUTF());
-       if(response.getString("status").equals("success")) {
+        //응답 받기
+       	JSONObject response = new JSONObject(dis.readUTF());
+       	if(response.getString("status").equals("success")) {
           list();
-       }
-	  }
+       	}
+    }
   
-	  //메소드: 종료
-	  public void exit() {
+    //메소드: 종료
+    public void exit() {
         stop();
     }
   
-	  //메소드: 메인
-	  public static void main(String[] args) {
+    //메소드: 메인
+    public static void main(String[] args) {
        ProductClient productClient = new ProductClient();
        try {
            productClient.start();
@@ -194,5 +194,5 @@ public class ProductClient {
            System.out.println(e.getMessage());
            productClient.stop();
        }
-	  }
+    }
 }
